@@ -1,0 +1,11 @@
+<h1>List of words</h1>
+<div style="float:right"><a href="/home/add">Add Word</a></div>
+<div style="float:right"><a href="/home/start_test">Take Test</a></div>
+<table>
+  <tr><td><h3>Word</h3></td><td><h3>Meaning</h3></td></tr>
+  <%  @words.each do |word| %>
+    <tr><td><%= word.word %></td><td><%= word.meanning %></td></tr>
+  <% end  %>
+</table>
+
+
