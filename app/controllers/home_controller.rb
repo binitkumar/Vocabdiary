@@ -9,9 +9,13 @@ class HomeController < ApplicationController
   end
 
   def start_test
-    session[:test_paper_id] = rand(100000000)
-    session[:q_count] = false
-    redirect_to :action=>'test_vocab'
+    if Word.all.length < 4
+      render :text=>"Less then 4 words in database. Unable to generate test paper"
+    else
+      session[:test_paper_id] = rand(100000000)
+      session[:q_count] = false
+      redirect_to :action=>'test_vocab'
+    end
   end
 
   def test_vocab

@@ -1,12 +1,13 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-
+gem 'json'
+gem 'autotest'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,13 +22,34 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'haml'
+gem 'will_paginate'
+gem 'devise'
+gem 'aws-sdk'
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'rspec', '~>2.8.0'
+  gem 'cucumber-rails',:require => false
+  gem 'cucumber'
+  gem 'database_cleaner'
+  gem 'webrat'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'shoulda-matchers'
+  gem 'haml-rails'
+  gem 'hpricot'
+  gem 'ruby_parser'
+  gem 'paperclip'
+  gem 'web-app-theme'
+  gem 'factory_girl'
+end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
-
+gem 'pg'
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -35,4 +57,4 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+# gem 'ruby-debug'
